@@ -7,6 +7,7 @@ const ContactForm = () => {
     mode: "onBlur",
   });
   const onSubmit = (data) => {
+    console.log(data);
     setData(data);
   };
 
@@ -18,7 +19,7 @@ const ContactForm = () => {
           <input
             name="firstName"
             placeholder="Edd"
-            ref={register({ required: true, maxLength: 3 })}
+            ref={register({ required: true})}
           />
           {errors.firstName && (
             <p>Looks like there was an error: {errors.firstName.type}</p>
@@ -44,7 +45,7 @@ const ContactForm = () => {
           </label>
           <input name="email" 
             id="lastName"
-            placeholder="bluebill1049@hotmail.com"
+            placeholder="test@test.com"
             ref={register({ required: true })} 
           />
           {errors.email && (
